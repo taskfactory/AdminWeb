@@ -1,7 +1,7 @@
 import { Menu, Layout, theme, Typography } from 'antd';
 import { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import ConfigItems from '../routesConfig';
+import {RouterItems} from '../config.jsx';
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -32,7 +32,7 @@ const MainLayout = () => {
                     theme={"dark"}
                     defaultSelectedKeys={['source']}
                     mode="inline">
-                    {ConfigItems.map((item, idx) => {
+                    {RouterItems.map((item, idx) => {
                         if (item?.children?.length > 0) {
                             const children = item.children.map((child, childIdx) => {
                                 return (

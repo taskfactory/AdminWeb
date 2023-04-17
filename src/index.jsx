@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import NotFound from './pages/notFound';
 import { HashRouter, Routes, Route } from 'react-router-dom'
-import ConfigItems from './routesConfig';
+import {RouterItems} from './config.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,7 +13,7 @@ root.render(
     <HashRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          {ConfigItems.map((item, idx) => {
+          {RouterItems.map((item, idx) => {
             const children = item?.children?.map((child, childIdx) => {
               return (
                 <Route path={child.path} element={child.element} key={idx * 1000 + childIdx + 1} />

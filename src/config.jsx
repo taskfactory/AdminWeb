@@ -15,7 +15,7 @@ function buildConfig(path, elem, label, showInMenu, icon, children) {
     };
 }
 
-const ConfigItems = [
+const RouterItems = [
     buildConfig("source", <SourcePage />, "来源管理", true, <FolderFilled />),
     buildConfig("test", <ErrorPage />, "Test", true, <FolderFilled />),
     buildConfig("user", <ErrorPage />, "User", true, <FolderFilled />, [
@@ -25,4 +25,4 @@ const ConfigItems = [
     ])
 ];
 
-export default ConfigItems;
+export {RouterItems};
